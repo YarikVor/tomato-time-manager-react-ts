@@ -21,11 +21,11 @@ export const loadSettings = (): ReadOnlySettingsContextType => {
         },
         cucumber: {
           icon: "🥒",
-          delay: TimeSpan.createFromSeconds(5),
+          delay: TimeSpan.createFromMinutes(5),
         },
         tomato: {
           icon: "🍅",
-          delay: TimeSpan.createFromSeconds(25),
+          delay: TimeSpan.createFromMinutes(25),
         },
       },
       countTomato: 4,
