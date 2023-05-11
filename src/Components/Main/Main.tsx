@@ -96,7 +96,7 @@ const Main = () => {
     });
   }, [settingsContext]);
 
-  const [settingsPause, setSettingsPause] = useState(true);
+  const [settingsPause, setSettingsPause] = useState(false);
 
   return (
     <>
