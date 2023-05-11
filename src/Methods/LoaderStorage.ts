@@ -17,15 +17,15 @@ export const loadSettings = (): ReadOnlySettingsContextType => {
       vegetables: {
         grape: {
           icon: "🍇",
-          delay: TimeSpan.createFromSeconds(1),
+          delay: TimeSpan.createFromMinutes(20),
         },
         cucumber: {
           icon: "🥒",
-          delay: TimeSpan.createFromSeconds(1),
+          delay: TimeSpan.createFromSeconds(5),
         },
         tomato: {
           icon: "🍅",
-          delay: TimeSpan.createFromSeconds(1),
+          delay: TimeSpan.createFromSeconds(25),
         },
       },
       countTomato: 4,
