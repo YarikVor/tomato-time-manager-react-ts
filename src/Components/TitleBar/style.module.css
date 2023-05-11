@@ -1,0 +1,29 @@
+.mainStyle {
+    display: flex;
+    flex-direction: column;
+    width: 750px;
+}
+
+.iconStyle {
+    font-size: 192px;
+    aspect-ratio: 1;
+    margin-top: -0.2em;
+}
+
+.titleStyle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.timerStyle {
+    font-size: 160px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.subtitleStyle {
+    font-size: 32px;
+    display: flex;
+    justify-content: space-between;
+}

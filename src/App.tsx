@@ -1,25 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import Header from "./Components/Header/Header";
+import Main from "./Components/Main/Main";
+import SettingsContext, { VegetableSettings } from "./Contexts/SettingsContext";
+import { loadSettings } from "./Methods/LoaderStorage";
+import { ActionTEmpty } from "./Methods/Methods";
 
 function App() {
+  const [settings, setSettings] = useState(loadSettings());
+
+  console.log(settings);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <SettingsContext.Provider
+        value={{
+          countTomato: settings.countTomato,
+          vegetables: settings.vegetables,
+          updateCountTomato: ActionTEmpty<number>,
+          updateVegetables: ActionTEmpty<VegetableSettings>,
+          isSound: settings.isSound,
+          countNextVegetables: settings.countNextVegetables,
+          updateSettings: setSettings,
+        }}
+      >
+        <Main />
+      </SettingsContext.Provider>
+    </>
   );
 }
 

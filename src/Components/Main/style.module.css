@@ -1,0 +1,31 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.subMain {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: auto;
+}
+
+.subSubMain {
+    display: flex;
+    flex-direction: row;
+    /*height: dynamic*/
+}
+
+.title {
+    margin-right: 16px;
+    width: min-content;
+    height: fit-content;
+}
+
+.list {
+    overflow: hidden scroll;
+    flex-shrink: 0;
+    height: 100%;
+}
